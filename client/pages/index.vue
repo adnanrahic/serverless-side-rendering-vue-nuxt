@@ -6,29 +6,22 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  export default {
-    async asyncData ({ params }) {
-      let { data } = await axios.get('https://swapi.co/api/people/1/')
-      return { chosenOne: data.name }
-    },
-    computed: {
-      theName () {
-        return this.name || 'anon'
-      }
-    },
-    // head: {
-    //   link: [
-    //     {
-    //       rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css'
-    //     }
-    //   ]
-    // }
+import axios from "axios";
+export default {
+  async asyncData({ params }) {
+    let { data } = await axios.get("https://swapi.co/api/people/1/");
+    return { chosenOne: data.name };
+  },
+  computed: {
+    theName() {
+      return this.name || "anon";
+    }
   }
+};
 </script>
 
 <style scoped>
-  .indexMargin {
-    margin: 15px
-  }
+.indexMargin {
+  margin: 15px;
+}
 </style>

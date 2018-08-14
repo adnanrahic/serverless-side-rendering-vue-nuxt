@@ -3,18 +3,18 @@
 </template>
 
 <script>
-  export default {
-    layout: 'post',
-    data () {
-      return {
-        type: 'Posts'
-      }
-    }
+export default {
+  layout: "post",
+  data() {
+    return {
+      type: "Posts"
+    };
   }
+};
 </script>
 
 <style scoped>
-  h1 {
-    color: blueviolet
-  }
+h1 {
+  color: blueviolet;
+}
 </style>
