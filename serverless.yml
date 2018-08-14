@@ -1,0 +1,26 @@
+service: serverless-side-rendering-vue-nuxt
+
+custom:
+  secrets: ${file(secrets.json)}
+  apigwBinary:
+    types:
+      - '*/*'
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${self:custom.secrets.NODE_ENV}
+  region: eu-central-1
+  environment: 
+    NODE_ENV: ${self:custom.secrets.NODE_ENV}
+
+functions:
+  app:
+    handler: app.run
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+
+plugins:
+  - serverless-apigw-binary
+  - serverless-offline
