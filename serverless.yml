@@ -17,6 +17,7 @@ functions:
 
 plugins:
   - serverless-apigw-binary
+  - serverless-domain-manager
   - serverless-offline
 
 custom:
@@ -24,3 +25,8 @@ custom:
   apigwBinary:
     types:
       - '*/*'
+  customDomain:
+    domainName: vue-ssr.dashbird.io
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
