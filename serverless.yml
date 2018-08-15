@@ -1,11 +1,5 @@
 service: serverless-side-rendering-vue-nuxt
 
-custom:
-  secrets: ${file(secrets.json)}
-  apigwBinary:
-    types:
-      - '*/*'
-
 provider:
   name: aws
   runtime: nodejs8.10
@@ -24,3 +18,9 @@ functions:
 plugins:
   - serverless-apigw-binary
   - serverless-offline
+
+custom:
+  secrets: ${file(secrets.json)}
+  apigwBinary:
+    types:
+      - '*/*'
