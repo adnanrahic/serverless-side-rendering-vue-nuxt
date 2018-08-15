@@ -18,8 +18,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "helmet": "^3.13.0",
     "nuxt": "^1.4.2",
     "serverless-apigw-binary": "^0.4.4",
+    "body-parser": "^1.18.3",
+    "mongoose": "^5.1.7",
     "serverless-http": "^1.6.0"
   },
   "devDependencies": {

@@ -9,11 +9,16 @@ provider:
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
 
 functions:
-  app:
-    handler: app.run
+  nuxt:
+    handler: index.nuxt
     events:
       - http: ANY /
       - http: ANY /{proxy+}
+  api:
+    handler: index.api
+    events:
+      - http: ANY /api
+      - http: ANY /api/{proxy+}
 
 plugins:
   - serverless-apigw-binary
