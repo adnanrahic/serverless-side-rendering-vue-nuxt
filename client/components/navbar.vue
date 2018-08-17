@@ -5,10 +5,10 @@
         <nuxt-link to="/">Home</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/posts">Posts</nuxt-link>
+        <nuxt-link to="/dogs">Dogs</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/posts/sukret">Posts With Param</nuxt-link>
+        <nuxt-link to="/dogs/shepherd">Only Shepherds</nuxt-link>
       </li>
     </ul>
   </nav>

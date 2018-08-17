@@ -1,7 +1,8 @@
 <template>
   <div class="indexMargin">
     <h1>This is the Front Page.</h1>
-    <h3>The chosen one is called {{ chosenOne }}</h3>
+    <h3>Random dog of the day:</h3>
+    <img :src="dog.url" alt="">
   </div>
 </template>
 
@@ -9,13 +10,10 @@
 import axios from "axios";
 export default {
   async asyncData({ params }) {
-    let { data } = await axios.get("https://swapi.co/api/people/1/");
-    return { chosenOne: data.name };
-  },
-  computed: {
-    theName() {
-      return this.name || "anon";
-    }
+    const { data } = await axios.get(
+      "https://api.thedogapi.com/v1/images/search?limit=1"
+    );
+    return { dog: data[0] };
   }
 };
 </script>
