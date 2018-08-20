@@ -1,4 +1,3 @@
-const secrets = require('./secrets.json')
 module.exports = {
   mode: 'universal',
   head: {
@@ -11,7 +10,7 @@ module.exports = {
   },
   build: {
     vendor: ['axios'],
-    publicPath: `/${secrets.NODE_ENV}/_nuxt/`
+    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
   },
   srcDir: 'client/',
   performance: {

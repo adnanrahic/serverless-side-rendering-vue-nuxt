@@ -1,5 +1,5 @@
 <template>
-  <div class="indexMargin">
+  <div>
     <h1>This is the Front Page.</h1>
     <h3>Random dog of the day:</h3>
     <img :src="dog.url" alt="">
@@ -17,9 +17,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.indexMargin {
-  margin: 15px;
-}
-</style>

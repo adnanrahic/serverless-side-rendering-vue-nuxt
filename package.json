@@ -2,27 +2,31 @@
   "name": "serverless-side-rendering-vue-nuxt",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
+  "engines": {
+    "node": "8.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "deploy": "npm run build && sls deploy",
     "start-server": "npm run build && node app.js",
-    "start-sls": "npm run build && sls offline start",
-    "deploy": "npm run build && sls deploy"
+    "start-sls": "npm run build && sls offline start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "helmet": "^3.13.0",
+    "mongoose": "^5.1.7",
     "nuxt": "^1.4.2",
     "serverless-apigw-binary": "^0.4.4",
-    "body-parser": "^1.18.3",
-    "mongoose": "^5.1.7",
     "serverless-http": "^1.6.0"
   },
   "devDependencies": {

@@ -31,7 +31,7 @@ custom:
     types:
       - '*/*'
   customDomain:
-    domainName: vue-ssr.dashbird.io
+    domainName: ${self:custom.secrets.DOMAIN}
     basePath: ''
-    stage: ${self:provider.stage}
+    stage: ${self:custom.secrets.NODE_ENV}
     createRoute53Record: true
