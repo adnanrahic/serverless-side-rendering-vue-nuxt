@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'universal',
+
   head: {
     title: 'Vue Nuxt Test',
     meta: [
@@ -8,16 +9,10 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ]
   },
-  build: {
-    vendor: ['axios'],
-    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
-  },
+
   srcDir: 'client/',
-  performance: {
-    gzip: false
-  },
-  router: {
-    base: `/`
-  },
-  dev: false
+
+  render: {
+    compressor: false
+  }
 }
