@@ -10,13 +10,9 @@ module.exports = {
     ]
   },
 
-  build: {
-    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
-  },
-
   srcDir: 'client/',
 
-  performance: {
-    gzip: false
+  render: {
+    compressor: false
   }
 }
